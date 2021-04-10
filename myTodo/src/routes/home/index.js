@@ -3,7 +3,16 @@ import style from './style.css';
 
 const Home = () => (
 	<div class={style.home}>
-		{/* <h1>It's me</h1> */}
+		<div class={style.layout}>
+		<div class={style.detail}>
+			<h1>Welcome, To-Do Lists</h1>
+			
+		</div>
+		<div class={style.photo}>
+		<img src="../assets/photos/Checklist.svg" />
+		</div>
+		</div>
+		
 	</div>
 );
 

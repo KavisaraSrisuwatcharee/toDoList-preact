@@ -1,6 +1,24 @@
 .home {
 	background: rgb(200,109,215);
-background: linear-gradient(22deg, rgba(200,109,215,1) 0%, rgba(48,35,174,1) 100%);
-	min-height: 100%;
-	width: 100%;
+	background: linear-gradient(22deg, rgba(200,109,215,1) 0%, rgba(48,35,174,1) 100%);
+	padding: 0%;
+	margin: 0%;
+	width: 100vw;
+	height: 100vh;
+	
 }
+.layout{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.detail{
+	position: relative;
+	top:50%;
+	color: whitesmoke;
+	
+}
+/* .detail h1{
+	margin: 0%;
+} */
+
