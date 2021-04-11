@@ -11,30 +11,43 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-left: 130px;
+	margin-left: 10%;
 }
 .detail{
-	position: relative;
-	top:50%;
+	margin-top: 10%;
 	color: whitesmoke;
-	
+	/* border: 2px solid salmon; */
 }
 .detail h1{
 	font-weight: 600;
-	font-size: 55px;
+	font-size: 60px;
+	margin-bottom: 50px;
 }
 .detail p{
 	font-weight: 400;
-	font-size: 25px;
+	font-size: 30px;
 }
 .photo img{
-	width: 80%;
-	height: 80%;
+	width: 90%;
+	height: 90%;
 }
 .photo{
 	/* border: solid 2px red; */
+	position: relative;
+	right: 5%;
 	margin-top: 90px;
 	display: flex;
 	justify-content: center;
 }
-
+.detail button{
+	color: whitesmoke;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-decoration: none;
+	background-color:#F49E5D;
+	border: none;
+	padding: 20px 60px;
+	border-radius:25px ;
+	margin-top: 15%;
+}
