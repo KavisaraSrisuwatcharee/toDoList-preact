@@ -6,7 +6,8 @@ const Home = () => (
 		<div class={style.layout}>
 		<div class={style.detail}>
 			<h1>Welcome, To-Do Lists</h1>
-			
+			<p>Prioritized lists of all the things</p>
+			<p>you must do.</p>
 		</div>
 		<div class={style.photo}>
 		<img src="../assets/photos/Checklist.svg" />

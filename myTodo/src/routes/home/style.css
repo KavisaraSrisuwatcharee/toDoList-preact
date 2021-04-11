@@ -11,6 +11,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-left: 130px;
 }
 .detail{
 	position: relative;
@@ -18,7 +19,22 @@
 	color: whitesmoke;
 	
 }
-/* .detail h1{
-	margin: 0%;
-} */
+.detail h1{
+	font-weight: 600;
+	font-size: 55px;
+}
+.detail p{
+	font-weight: 400;
+	font-size: 25px;
+}
+.photo img{
+	width: 80%;
+	height: 80%;
+}
+.photo{
+	/* border: solid 2px red; */
+	margin-top: 90px;
+	display: flex;
+	justify-content: center;
+}
 
