@@ -1,0 +1,29 @@
+.toDo {
+	background: rgb(200,109,215);
+	background: linear-gradient(22deg, rgba(200,109,215,1) 0%, rgba(48,35,174,1) 100%);
+	padding: 0%;
+	margin: 0%;
+	width: 100vw;
+	height: 100vh;
+	
+}
+.layout{
+  position: relative;
+  left: 45%;
+    border: 2px soild black;
+}
+.layout input{
+    padding: 15px 40px;
+    background: white;
+    border-radius: 5px;
+    border: none;
+    /* box-shadow: 16px 16px 48px rgba(0, 0, 0, 0.0994678); */
+}
+.layout h1{
+    color: whitesmoke;
+}
+.layout button{
+    border: none;
+    border-radius: 10px;
+    padding: 8px 40px;
+}
