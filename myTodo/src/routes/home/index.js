@@ -1,12 +1,10 @@
 import { h } from 'preact';
 import { route } from 'preact-router';
-route('url');
 import style from './style.css';
 import toDo from '../ToDo';
 const Home = () => {
-	
 	const goTodo = () => {
-		route("/todo");
+		route('/todo');
 	}
 	return (
 	<div class={style.home}>
