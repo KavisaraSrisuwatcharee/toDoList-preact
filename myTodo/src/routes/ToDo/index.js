@@ -1,14 +1,14 @@
-import { h } from 'preact';
-import style from './style.css';
+import { h} from 'preact';
+import { useState } from 'preact/hooks';
+import style from '../ToDo/style.css';
+import TodoForm from '../../components/todoForm/todoForm'
 const toDo = () =>{
+    const [todos,setTodos] =useState([]);
 return(
     <div class={style.toDo}>
-        <div class={style.layout}>
-        <h1>Add Todo</h1>
-        <input></input>  
-        <button>Add</button>
+        <TodoForm/>
         
-        </div>
+        
     </div>
 )
 }
