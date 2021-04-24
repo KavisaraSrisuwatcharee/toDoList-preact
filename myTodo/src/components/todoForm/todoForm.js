@@ -1,33 +1,37 @@
-import { h} from 'preact';
+import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import style from './todoForm.module.css'
 import ToDoList from '../todolist/todolist.js'
-const toDoForm = () =>{
-    // state ={ todos:[],text:''};
-    // // const [todos,setTodos] =useState([]);
-    // addTodo = () => {
-    //     let {todos,text} =this.state;
-    //     todos = todos.concat({ text });
-    //     this.setState({ todos, text: '' });
-    // }
-   
-    return(
-    <div class={style.toDoForm}>
-        <form >
-        <div class={style.layout}>
-        <h1>Add Todo</h1>
-        <div class={style.fill}>
-        <input value={text} 
-        onChange={(e) => this.setState({
-            text:e.target.value}
-            )}/>
+const toDoForm = () => {
+    const [todo, setTodo] = useState([])
+    const [text, setText] = useState('')
+    const addTodo = () => {
+        setTodo([...todo, text])
+        setText('')
+    }
+
+    return (
+        <div class={style.toDoForm}>
+
+            <div class={style.layout}>
+                <h1>Add Todo</h1>
+                <div class={style.fill}>
+                    <input value={text}
+                        onChange={(e) => {
+                            setText(e.target.value)
+                        }
+                        } />
+                </div>
+                <button onClick={addTodo} >Add</button>
+                <div class={style.setList}>
+                {
+                    todo.map(t => (<ToDoList text={t} />))
+                }
+                </div>
+            </div>
+
         </div>
-        <button type="submit">Add</button>
-        <ToDoList/>
-        </div>
-        </form>
-    </div>
-        )
-    
+    )
+
 }
 export default toDoForm;
