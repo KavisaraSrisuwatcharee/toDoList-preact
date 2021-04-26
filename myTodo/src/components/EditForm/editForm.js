@@ -3,8 +3,9 @@ import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import style from './editform.css'
-import Axios from "Axios"
+import axios from "Axios"
 const editForm = (props) => {
+  
   
 
   return (
@@ -23,7 +24,7 @@ const editForm = (props) => {
           
         />
         <div class={style.btn}>
-          <Button onClick={props.handleClose}>change</Button>
+          <Button onClick={props.edittodo}>change</Button>
           <Button onClick={props.handleClose}>cancel</Button>
         </div>
         </div>

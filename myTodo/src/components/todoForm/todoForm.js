@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState,useEffect } from 'preact/hooks';
 import style from './todoForm.module.css'
 import ToDoList from '../todolist/todolist.js'
 import axios from "Axios"
@@ -7,24 +7,29 @@ const toDoForm = () => {
     const [todo, setTodo] = useState([])
     const [text, setText] = useState('')
     
-    const insertTodo = async () => {
-     const res =await axios.post('http://localhost:8080/api', data, {
-
-     })   
+    
+    const addTodo = async () => {
+        if(text==''){
+            return;
+        }
+        const res = await axios.post('http://localhost:5000/api/todo',
+        {name:text})  
+        console.log(res.data);
+        setTodo(res.data);
+        console.log(text);
+        setText('')
+        
     }
     const fetchTodo = async () => {
-        const res = await axios.get('http://localhost:8080/api')
+        const res =await axios.get('http://localhost:5000/api/todos')
         setTodo(res.data)
         console.log(res.data)
     }
-    const addTodo = () => {
-        setTodo([...todo, text])
-        setText('')
-    }
     useEffect(() => {
-        fetchTodo()
+       addTodo()
+       fetchTodo()
     }, [])
-    console.log(todo)
+   
 
     return (
         <div class={style.toDoForm}>
@@ -38,10 +43,10 @@ const toDoForm = () => {
                         }
                         } />
                 </div>
-                <button onClick={insertTodo} >Add</button>
+                <button onClick={addTodo} >Add</button>
                 <div class={style.setList}>
                 {
-                    todo.map(t => (<ToDoList text={t} />))
+                    todo.map(t => (<ToDoList text={t.name} id={t.id} />))
                 }
                 </div>
             </div>
