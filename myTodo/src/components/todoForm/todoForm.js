@@ -2,6 +2,7 @@ import { h } from 'preact';
 import { useState,useEffect } from 'preact/hooks';
 import style from './todoForm.module.css'
 import ToDoList from '../todolist/todolist.js'
+import EditForm from '../EditForm/editForm.js'
 import axios from "Axios"
 const toDoForm = () => {
     const [todo, setTodo] = useState([])
@@ -46,7 +47,7 @@ const toDoForm = () => {
                 <button onClick={addTodo} >Add</button>
                 <div class={style.setList}>
                 {
-                    todo.map(t => (<ToDoList text={t.name} id={t.id} />))
+                    todo.map(t => (<ToDoList text={t.name} id={t.id} onEditSuccess={fetchTodo} />))
                 }
                 </div>
             </div>
