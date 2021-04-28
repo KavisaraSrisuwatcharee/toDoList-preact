@@ -1,6 +1,5 @@
 import style from './todolist.css'
 import { useState } from 'preact/hooks';
-import axios from "axios"
 
 // import CardPage from '../card';
 import Card from 'preact-material-components/Card';
