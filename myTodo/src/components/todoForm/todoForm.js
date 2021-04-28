@@ -3,7 +3,7 @@ import { useState,useEffect } from 'preact/hooks';
 import style from './todoForm.module.css'
 import ToDoList from '../todolist/todolist.js'
 import EditForm from '../EditForm/editForm.js'
-import axios from "Axios"
+import axios from "axios"
 const toDoForm = () => {
     const [todo, setTodo] = useState([])
     const [text, setText] = useState('')

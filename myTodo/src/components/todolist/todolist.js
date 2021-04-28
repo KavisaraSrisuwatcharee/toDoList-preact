@@ -1,12 +1,12 @@
 import style from './todolist.css'
 import { useState } from 'preact/hooks';
-import Axios from "Axios"
+import axios from "axios"
 
 // import CardPage from '../card';
 import Card from 'preact-material-components/Card';
 import 'preact-material-components/Card/style.css';
 import EditForm from '../../components/EditForm/editForm.js'
-import axios from "Axios"
+import axios from "axios"
 const todoList = (props) => {
     const [dialog, setDialog] = useState(false);
     const popDialog = () => {

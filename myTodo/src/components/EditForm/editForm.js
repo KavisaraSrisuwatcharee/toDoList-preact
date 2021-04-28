@@ -4,7 +4,7 @@ import { useState, useEffect } from 'preact/hooks';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import style from './editform.css'
-import axios from "Axios"
+import axios from "axios"
 const editForm = (props) => {
   const [text, setText] = useState('')
   const editTodo = async () => {
