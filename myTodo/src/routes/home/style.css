@@ -5,7 +5,6 @@
 	margin: 0%;
 	width: 100vw;
 	height: 100vh;
-	
 }
 .layout{
 	display: flex;
@@ -16,7 +15,6 @@
 .detail{
 	margin-top: 10%;
 	color: whitesmoke;
-	/* border: 2px solid salmon; */
 }
 .detail h1{
 	font-weight: 600;
@@ -49,5 +47,4 @@
 	border: none;
 	padding: 15px 50px;
 	border-radius:25px ;
-	/* margin-top: 5%; */
 }
